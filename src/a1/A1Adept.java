@@ -7,8 +7,14 @@ public class A1Adept {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-
-		// Your code follows here.
+		int c = scan.nextInt();
+		
+		
+		for(int i = 0; i < c; i++) {
+			String[] product = new String[c];
+			product[i] = scan.next();
+			scan.nextInt();
+		}
 		
 	}
 }

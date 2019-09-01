@@ -18,7 +18,7 @@ public class A1Adept {
 		// total represents the double value of the number of each items * its respective price
 		String[] product = new String[c];
 		// creates a new string array with 6 spots
-		Double [] totalprice = new Double[5];
+		Double [] totalprice = new Double[30];
 		Double[] price = new Double[c];
 		for(int i = 0; i < c; i++) {
 			//for loop that loops 6 times

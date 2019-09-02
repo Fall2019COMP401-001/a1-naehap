@@ -43,7 +43,7 @@ public class A1Jedi {
 					 }	
 						duplicate[k] = true;
 				 }
-				}
+				} //d
 				
 	
 			} 	

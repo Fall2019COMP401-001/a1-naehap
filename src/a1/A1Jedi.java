@@ -1,5 +1,6 @@
 package a1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class A1Jedi {
@@ -12,6 +13,8 @@ public class A1Jedi {
 		Double[] price = new Double[c];
 		int[]cust_count = new int[c];
 		int[]product_count = new int[c];
+		boolean[]duplicate = new boolean[c];
+		
 		for(int i = 0; i < c; i++) {
 			//for loop that loops 6 times
 			product[i] = scan.next();
@@ -30,16 +33,22 @@ public class A1Jedi {
 				String fruit = scan.next();
 				
 				for (int k = 0; k < c; k++) {
-					if (fruit.equals(product[k])) {
+					//if (duplicate[k]== (true)) {
+					//	product_count[k] = product_count[k] + num;
+					//} 
+				 if (fruit.equals(product[k])) {
+					 product_count[k] = product_count[k] + num;
+					 if (duplicate[k] == false) {
 						cust_count[k] = cust_count[k] + 1;
-						product_count[k] = product_count[k] + num;
-						
-					}
-					
+					 }	
+						duplicate[k] = true;
+				 }
 				}
 				
 	
 			} 	
+			Arrays.fill(duplicate, false);
+			
 			
 		}
 		 for (int l=0; l < c; l++) {
@@ -47,7 +56,7 @@ public class A1Jedi {
 				 System.out.println("No customers bought " + product[l]);
 			 } else {
 			 System.out.println(cust_count[l] + " customers bought " + product_count[l] + " "+ product[l]);
-		 }
+			 	}
 		 }
 		
 		
